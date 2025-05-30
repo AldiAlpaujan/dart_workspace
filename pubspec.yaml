@@ -1,0 +1,46 @@
+name: dart_workspace
+description: A sample command-line application.
+publish_to: "none"
+version: 1.0.0
+
+workspace:
+  - app/flutter_workspace
+  - features/home
+  - packages/core
+  - packages/bases
+  - packages/network
+  - packages/session
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # icons
+  cupertino_icons: ^1.0.8
+
+  # HTTP Request
+  dio: ^5.8.0+1
+  
+  # Network client generator
+  retrofit: ^4.4.2
+
+  # State Management
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+
+  # Dependency Injection
+  get_it: ^8.0.3
+  injectable: ^2.5.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  melos: ^6.3.3
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
+  json_serializable: ^6.9.0
+  auto_route_generator: ^9.0.0
+  injectable_generator: ^2.6.2
+  retrofit_generator: ^9.2.0

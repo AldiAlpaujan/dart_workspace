@@ -1,0 +1,14 @@
+name: dart_workspace
+
+packages:
+  - app/**
+  - features/**
+  - packages/**
+
+scripts:
+  build-runner:
+    run: melos exec -- "dart run build_runner build -d"
+    description: "Run build runner in all package that depends on build_runner."
+    packageFilters:
+      dependsOn:
+        - "build_runner"

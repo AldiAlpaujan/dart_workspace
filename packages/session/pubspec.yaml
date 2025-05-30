@@ -1,0 +1,24 @@
+name: session
+description: A sample command-line application.
+version: 1.0.0
+publish_to: none
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ">=3.7.2"
+
+resolution: workspace
+
+# Add regular dependencies here.
+dependencies:
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # dependencies overridess
+  equatable: any
+
+dev_dependencies:
+  lints: any
+  build_runner: any
+  hive_generator: ^2.0.1
