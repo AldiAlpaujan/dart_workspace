@@ -11,21 +11,23 @@
 import 'package:core/src/di/core_module.dart' as _i748;
 import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
+import 'package:home/home.dart' as _i1024;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
-  _i174.GetIt init({
+  Future<_i174.GetIt> init({
     String? environment,
     _i526.EnvironmentFilter? environmentFilter,
-  }) {
+  }) async {
     final gh = _i526.GetItHelper(
       this,
       environment,
       environmentFilter,
     );
     final coreModules = _$CoreModules();
-    gh.factory<_i361.Dio>(() => coreModules.dio);
+    gh.singleton<_i361.Dio>(() => coreModules.dio);
+    await _i1024.HomePackageModule().init(gh);
     return this;
   }
 }

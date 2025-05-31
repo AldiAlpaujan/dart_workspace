@@ -1,7 +1,7 @@
 name: home
 description: A sample command-line application.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+publish_to: none
 
 resolution: workspace
 
@@ -10,11 +10,26 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  flutter:
+    sdk: flutter
   # path: ^1.8.0
+
+  core: any
+  bases: any
+
+  dio: any
+  json_annotation: any
+  retrofit: any
+
+  blocy: any
+  flutter_bloc: any
 
   get_it: any
   injectable: any
 
 dev_dependencies:
+  flutter_lints: any
   build_runner: any
+  json_serializable: any
+  retrofit_generator: any
   injectable_generator: any

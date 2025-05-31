@@ -6,6 +6,7 @@ import 'package:network/network.dart';
 abstract class CoreModules {
   // router
   // dio
-  Dio get dio => initDio('');
+  @singleton
+  Dio get dio => initDio('https://api-dev.jadinakes.id/v3');
   // session
 }

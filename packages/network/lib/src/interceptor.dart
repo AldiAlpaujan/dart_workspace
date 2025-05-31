@@ -13,19 +13,19 @@ class DioInterceptor extends Interceptor {
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {
-    options.headers['Authorization'] = 'Bearer ${session.getToken}';
-    options.headers['X-DEVICE-ID'] = session.deviceId;
-    if (session.enableGroup) {
-      options.headers['Group-Id'] = session.getGroupId;
-    }
-    if (kDebugMode) print('HEADERS ${options.headers}');
+    // options.headers['Authorization'] = 'Bearer ${session.getToken}';
+    // options.headers['X-DEVICE-ID'] = session.deviceId;
+    // if (session.enableGroup) {
+    //   options.headers['Group-Id'] = session.getGroupId;
+    // }
+    // if (kDebugMode) print('HEADERS ${options.headers}');
     logReq(
       '${options.method} ${options.path}',
       options.queryParameters,
       options.data,
     );
-    print('HEADERS');
-    print(options.headers.toString());
+    // print('HEADERS');
+    // print(options.headers.toString());
     return super.onRequest(options, handler);
   }
 
