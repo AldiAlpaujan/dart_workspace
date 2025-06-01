@@ -5,7 +5,8 @@ version: 1.0.0
 
 workspace:
   - app/flutter_workspace
-  - features/home
+  - features/common
+  - features/product
   - packages/core
   - packages/bases
   - packages/network
@@ -37,6 +38,9 @@ dependencies:
   # Dependency Injection
   get_it: ^8.0.3
   injectable: ^2.5.0
+
+  # Routing
+  auto_route: ^9.2.2
 
 dev_dependencies:
   lints: ^5.0.0

@@ -1,0 +1,34 @@
+name: product
+description: A sample command-line application.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  core: any
+  bases: any
+
+  dio: any
+  json_annotation: any
+  retrofit: any
+  auto_route: any
+
+  blocy: any
+  flutter_bloc: any
+
+  injectable: any
+
+dev_dependencies:
+  flutter_lints: any
+  build_runner: any
+  json_serializable: any
+  retrofit_generator: any
+  injectable_generator: any
+  auto_route_generator: any

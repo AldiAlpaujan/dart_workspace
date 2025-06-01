@@ -1,6 +1,5 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:home/home.dart';
 import 'package:session/session.dart';
 
 Future<void> main() async {
@@ -15,12 +14,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      routerDelegate: router.delegate(),
+      routeInformationParser: router.defaultRouteParser(),
+      // localizationsDelegates: AppThemes.localizationsDelegates,
+      // supportedLocales: AppThemes.supportedLocales,
+      // theme: AppThemes.light,
+      // darkTheme: AppThemes.dark,
+      // themeMode: themeSt.themeMode,
     );
   }
 }
